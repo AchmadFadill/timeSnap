@@ -9,7 +9,7 @@ class AppInterceptor extends Interceptor {
   void onRequest(RequestOptions options, RequestInterceptorHandler handler) async {
     options.headers['accept'] = 'application/json';
     final authToken = await SharedPreferencesHelper.getString(PREF_AUTH);
-    if (authToken?.isnotEmpty ?? false) {
+    if (authToken?.isNotEmpty ?? false) {
       options.headers['Authorization'] = authToken;
     }
     super.onRequest(options, handler);

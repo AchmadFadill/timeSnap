@@ -5,9 +5,12 @@ class LoadingAppWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(child: Container(
+    return Center(
+      child: Container(
       height: 200, 
       width: 200,
-      child: CircularProgressIndicator(),),);
+      child: CircularProgressIndicator(),
+      ),
+    );
   }
 }

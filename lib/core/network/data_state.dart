@@ -10,10 +10,10 @@ class DataState<T> extends BaseResponse {
   final T? data;
   DataState({required super.success, required super.message, this.data});
 
-  factory DataState.fromJson(Map<String, dynamic> json,){
+  factory DataState.fromJson(Map<String, dynamic> json){
     return DataState(
       success: json['success'], 
-      message: json['message'] ?? 'Succes', 
+      message: json['message'] ?? '', 
       data: json['data']);
   }
 }

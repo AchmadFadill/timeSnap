@@ -7,14 +7,11 @@ final sl = GetIt.instance;
 Future<void> initDependency() async {
   Dio dio = Dio();
   dio.interceptors.add(AppInterceptor());
-  dio.interceptors.add(
-    PrettyDioLogger(
+  dio.interceptors.add(PrettyDioLogger(
       requestBody: true,
       responseBody: true,
       responseHeader: true,
       requestHeader: true,
-      compact: true,
-    ),
-  );
+      compact: true));
   sl.registerSingleton<Dio>(dio);
 }
